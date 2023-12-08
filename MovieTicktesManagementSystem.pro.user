@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.1, 2023-12-08T12:09:09. -->
+<!-- Written by QtCreator 4.11.1, 2023-12-08T19:31:33. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -316,7 +316,7 @@
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">E:/QtCode/build-MovieTicktesManagementSystem-Desktop_Qt_5_14_2_MinGW_64_bit-Debug</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">E:/QtCode/build-MovieTicktesManagementSystem-Desktop_Qt_5_14_2_MinGW_64_bit-Release</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
