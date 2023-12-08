@@ -33,14 +33,24 @@
 	font-weight: 700;
 	font=family: STKaiti;
 	} 
+
 QMainWindow {
 	background-color: #f9faff;
 }
+
 #label_userID, #label_PassWord, #lineEdit_PassWord, #lineEdit_userID {
 	color: black;
 	font-family: 微软雅黑;
 	font-size: 20px; 
-}</string>
+}
+
+QLineEdit { 
+	font-size: 微软雅黑;
+	color: black;
+	background-color: #ffffff;
+	border: 1px solid #4c82eb;
+	border-radius: 3px;
+} </string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -304,8 +314,8 @@ QMainWindow {
        <widget class="QPushButton" name="pushButton_Login">
         <property name="minimumSize">
          <size>
-          <width>75</width>
-          <height>40</height>
+          <width>150</width>
+          <height>50</height>
          </size>
         </property>
         <property name="text">
@@ -333,8 +343,8 @@ QMainWindow {
        <widget class="QPushButton" name="pushButton_Exit">
         <property name="minimumSize">
          <size>
-          <width>75</width>
-          <height>40</height>
+          <width>150</width>
+          <height>50</height>
          </size>
         </property>
         <property name="text">

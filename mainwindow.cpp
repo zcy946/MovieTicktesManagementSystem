@@ -5,6 +5,7 @@
 #include <QSqlQuery>
 #include "WarningBox.h"
 #include "operationinterface.h"
+#include "about.h"
 
 //初始化静态成员变量-数据库是否连接
 bool MainWindow::isConnectedMySQL = false;
@@ -50,6 +51,11 @@ MainWindow::MainWindow(QWidget *parent)
     //menuBar
     //设置-配置数据库
     connect(ui->actionSettingMySQL, &QAction::triggered, this, &MainWindow::onActionTriggered_showSettingMySQL);
+    //关于
+    connect(ui->actionAbout, &QAction::triggered, [=](){
+        About * about = new About;
+        about->show();
+    });
 
 
     //账号密码lineEdit
@@ -61,7 +67,6 @@ MainWindow::MainWindow(QWidget *parent)
         this->close();
         qDebug() << "已退出";
     });
-
 
 }
 

@@ -10,5 +10,7 @@
         <file>res/search.png</file>
         <file>res/operationinterface.png</file>
         <file>res/addNewData.png</file>
+        <file>res/QQ.png</file>
+        <file>res/github.png</file>
     </qresource>
 </RCC>

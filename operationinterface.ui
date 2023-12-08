@@ -26,10 +26,10 @@
    <widget class="QWidget" name="widget_SideBar" native="true">
     <property name="geometry">
      <rect>
-      <x>9</x>
-      <y>9</y>
+      <x>20</x>
+      <y>40</y>
       <width>100</width>
-      <height>231</height>
+      <height>641</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -83,78 +83,54 @@
       <string>@所属组</string>
      </property>
     </widget>
-    <widget class="MyLabel" name="label_btnToPg1">
-     <property name="geometry">
-      <rect>
-       <x>9</x>
-       <y>81</y>
-       <width>45</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>按钮1</string>
-     </property>
-    </widget>
-    <widget class="MyLabel" name="label_btnToPg3">
-     <property name="geometry">
-      <rect>
-       <x>9</x>
-       <y>129</y>
-       <width>54</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>按钮3</string>
-     </property>
-    </widget>
-    <widget class="MyLabel" name="label_btnToPg4">
-     <property name="geometry">
-      <rect>
-       <x>9</x>
-       <y>153</y>
-       <width>45</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>按钮4</string>
-     </property>
-    </widget>
-    <widget class="MyLabel" name="label_btnToPg2">
-     <property name="geometry">
-      <rect>
-       <x>9</x>
-       <y>105</y>
-       <width>45</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>按钮2</string>
-     </property>
-    </widget>
-    <widget class="MyLabel" name="label_btnToPg5">
+    <widget class="QListWidget" name="listWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>180</y>
-       <width>45</width>
-       <height>18</height>
+       <width>101</width>
+       <height>391</height>
       </rect>
      </property>
-     <property name="text">
-      <string>按钮5</string>
+     <property name="cursor" stdset="0">
+      <cursorShape>ArrowCursor</cursorShape>
      </property>
+     <property name="itemAlignment">
+      <set>Qt::AlignRight</set>
+     </property>
+     <item>
+      <property name="text">
+       <string>按钮1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>按钮2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>按钮3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>按钮4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>按钮5</string>
+      </property>
+     </item>
     </widget>
    </widget>
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>115</x>
+      <x>160</x>
       <y>9</y>
-      <width>1176</width>
+      <width>1131</width>
       <height>674</height>
      </rect>
     </property>
@@ -266,6 +242,9 @@
           <width>100</width>
           <height>26</height>
          </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <item>
          <property name="text">

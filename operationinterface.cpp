@@ -57,51 +57,36 @@ OperationInterface::OperationInterface(QWidget *parent) :
     ui->label_userGroup->setStyleSheet("QLabel {font-family: 微软雅黑;"
                                     "font-size: 18px;}");
 
-    //label_btn
-    QString label_btn_style = "QLabel {background-color: #4c86eb;"
-                              "font-family: 微软雅黑;"
-                              "font-size: 23px;}"
-                              "QLabel:hover {background-color: #4074dd;}";
-    ui->label_btnToPg1->setGeometry(0, 20 + 100 + 30 * 2, 120, 70);
-    ui->label_btnToPg1->setStyleSheet(label_btn_style);
-    ui->label_btnToPg1->setCursor(Qt::PointingHandCursor);
-    ui->label_btnToPg1->setText("电影表");
-    ui->label_btnToPg2->setGeometry(0, 20 + 100 + 30 * 2 + 70 * 1, 120, 70);
-    ui->label_btnToPg2->setStyleSheet(label_btn_style);
-    ui->label_btnToPg2->setCursor(Qt::PointingHandCursor);
-    ui->label_btnToPg2->setText("影院表");
-    ui->label_btnToPg3->setGeometry(0, 20 + 100 + 30 * 2 + 70 * 2, 120, 70);
-    ui->label_btnToPg3->setStyleSheet(label_btn_style);
-    ui->label_btnToPg3->setCursor(Qt::PointingHandCursor);
-    ui->label_btnToPg3->setText("放映厅表");
-    ui->label_btnToPg4->setGeometry(0, 20 + 100 + 30 * 2 + 70 * 3, 120, 70);
-    ui->label_btnToPg4->setStyleSheet(label_btn_style);
-    ui->label_btnToPg4->setCursor(Qt::PointingHandCursor);
-    ui->label_btnToPg4->setText("场次表");
-    ui->label_btnToPg5->setGeometry(0, 20 + 100 + 30 * 2 + 70 * 4, 120, 70);
-    ui->label_btnToPg5->setStyleSheet(label_btn_style);
-    ui->label_btnToPg5->setCursor(Qt::PointingHandCursor);
-    ui->label_btnToPg5->setText("订单表");
-
-    //label_btn功能实现
-    //点击后跳转对应的页数,更新选中状态
-    connect(ui->label_btnToPg1, &MyLabel::clicked, [=](){
-        ui->stackedWidget->setCurrentIndex(0);
+    //listWidget
+    ui->listWidget->setGeometry(0, 20 + 100 + 30 + 30 + 10, 120, 400);
+    ui->listWidget->setStyleSheet("QListView {"
+                                      "border: none;"
+                                      "background-color: #4c82eb;"
+                                      "font-size: 23px;"
+                                      "font-widget: bold;"
+                                  "}"
+                                  "QListView::item {"
+                                      "height: 70px;"
+                                      "color: white;"
+                                      "border-top: 1px solid #4074dd;"
+                                  "}"
+                                  "QListView::item:hover:!selected{"
+                                      "background-color: #3986cf;"
+                                      "padding-left: 5px;"
+                                      "padding-bottom: 2px;"
+                                  "}"
+                                  "QListView::item:selected{"
+                                      "background-color: #4074dd;"
+                                  "}");
+    ui->listWidget->item(0)->setText("电影表");
+    ui->listWidget->item(1)->setText("影院表");
+    ui->listWidget->item(2)->setText("放映厅表");
+    ui->listWidget->item(3)->setText("场次表");
+    ui->listWidget->item(4)->setText("订单表");
+    //点击对应的项目跳转到对应的页数
+    connect(ui->listWidget, &QListWidget::itemClicked, [=](QListWidgetItem *item){
+        ui->stackedWidget->setCurrentIndex(ui->listWidget->row(item));
     });
-    connect(ui->label_btnToPg2, &MyLabel::clicked, [=](){
-        ui->stackedWidget->setCurrentIndex(1);
-    });
-    connect(ui->label_btnToPg3, &MyLabel::clicked, [=](){
-        ui->stackedWidget->setCurrentIndex(2);
-    });
-    connect(ui->label_btnToPg4, &MyLabel::clicked, [=](){
-        ui->stackedWidget->setCurrentIndex(3);
-    });
-    connect(ui->label_btnToPg5, &MyLabel::clicked, [=](){
-        ui->stackedWidget->setCurrentIndex(4);
-    });
-
-
 
     //widget_search
     ui->widget_search->setGeometry(10, 10, 500 - 40, 50);
