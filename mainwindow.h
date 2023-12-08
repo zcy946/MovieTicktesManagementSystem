@@ -8,6 +8,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+//此处设置管理员账号和密码，也可自行从数据库获取
 //账号
 const QString userID = "admin";
 //密码

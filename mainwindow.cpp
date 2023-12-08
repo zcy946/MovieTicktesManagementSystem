@@ -11,29 +11,25 @@
 bool MainWindow::isConnectedMySQL = false;
 
 //=================================================================================================================测试用代码
-void TEST_connectMySQL()
-{
-    //连接数据库
-    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL"); //选择连接方式
-    db.setHostName("localhost"); //主机名
-    db.setPort(3306); //端口号
-    db.setUserName("root"); //用户名
-    db.setPassword("abcd1234"); //密码
-    db.setDatabaseName("MovieTicktesManagementSystem"); //数据库名
-    db.open(); //打开数据库
-    if(!db.isOpen())
-    {
-        qDebug() << "数据库连接失败!";
-    }
-    else
-    {
-        qDebug() << "数据库连接成功!";
-    }
-}
-
-
-
-
+//void TEST_connectMySQL()
+//{
+//    //连接数据库
+//    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL"); //选择连接方式
+//    db.setHostName("localhost"); //主机名
+//    db.setPort(3306); //端口号
+//    db.setUserName("root"); //用户名
+//    db.setPassword("abcd1234"); //密码
+//    db.setDatabaseName("MovieTicktesManagementSystem"); //数据库名
+//    db.open(); //打开数据库
+//    if(!db.isOpen())
+//    {
+//        qDebug() << "数据库连接失败!";
+//    }
+//    else
+//    {
+//        qDebug() << "数据库连接成功!";
+//    }
+//}
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -97,12 +93,12 @@ void MainWindow::onPushButtonClicked_login()
     const QString uid = ui->lineEdit_userID->text();
     const QString passwd = ui->lineEdit_PassWord->text();
     //核对账号和密码
-//    if (checkUserIdAndPassWord(uid, passwd))
-    if (1) //=================================================================================================================测试用代码
+    if (checkUserIdAndPassWord(uid, passwd))
+//    if (1) //=================================================================================================================测试用代码
     {
-//        if (MainWindow::isConnectedMySQL)
-        TEST_connectMySQL();
-        if (1)//=================================================================================================================测试用代码
+        if (MainWindow::isConnectedMySQL)
+//        TEST_connectMySQL();
+//        if (1)//=================================================================================================================测试用代码
         {
             qDebug() << "登陆成功";
             showWarningMessage("登陆成功", QMessageBox::Information, "登陆成功");

@@ -240,7 +240,11 @@ QLineEdit {
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_passWord"/>
+          <widget class="QLineEdit" name="lineEdit_passWord">
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
