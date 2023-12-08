@@ -106,7 +106,7 @@ void SettingMySQL::connectMySQL(const QString hostname, const QString port, cons
     {
         qDebug() << "连接成功!";
         MainWindow::isConnectedMySQL = true;
-        showWarningMessage("登陆成功", QMessageBox::Information, "连接成功");
+        showWarningMessage("连接成功", QMessageBox::Information, "连接成功");
     }
     else
     {
