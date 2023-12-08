@@ -1,0 +1,70 @@
+#include "operationinterface.h"
+#include "ui_operationinterface.h"
+#include <QBitmap>
+#include <QDebug>
+#include <QPixmap>
+
+
+OperationInterface::OperationInterface(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::OperationInterface)
+{
+    ui->setupUi(this);
+    //设置窗口信息
+    this->setWindowTitle("电影售票管理系统");
+    this->setWindowIcon(QIcon(":/res/core.png"));
+    this->setMinimumSize(1300, 750);
+
+    ////////////////////////////////////////////////////////////////////////添加边框便于查看
+//    this->setStyleSheet("QLabel {border: 1px solid black;}");
+    //设置默认stackWidget界面
+    ui->stackedWidget->setCurrentIndex(0);
+    
+
+
+    //sideBar
+    //label-头像
+    ui->label_userPhoto->setGeometry(10, 20, 100 , 100);
+//    ui->label_userPhoto->setStyleSheet("QLabel {border-radius: 50%;}");
+    //加载头像
+    QPixmap pix;
+    pix.load(":res/icon2.png");
+    //拉伸图片
+    pix = pix.scaled(ui->label_userPhoto->width(), ui->label_userPhoto->height(), Qt::KeepAspectRatio);
+    //填充图片
+    ui->label_userPhoto->setPixmap(pix);
+
+    //label-userId & label-userGroup
+    ui->label_userID->setGeometry(10, 20 + 100, 100, 30);
+    ui->label_userGroup->setGeometry(10, 20 + 100 + 30 * 1, 100, 30);
+    //label_btn
+    ui->label_btnToPg1->setGeometry(0, 20 + 100 + 30 * 2, 120, 70);
+    ui->label_btnToPg1->setStyleSheet("QWidget { border-bottom: 1px solid black; }");
+    ui->label_btnToPg2->setGeometry(0, 20 + 100 + 30 * 2 + 70 * 1, 120, 70);
+    ui->label_btnToPg3->setGeometry(0, 20 + 100 + 30 * 2 + 70 * 2, 120, 70);
+    ui->label_btnToPg4->setGeometry(0, 20 + 100 + 30 * 2 + 70 * 3, 120, 70);
+
+    //label-button
+    connect(ui->label_btnToPg1, &QLabel::linkActivated, [=](){
+        ui->stackedWidget->setCurrentIndex(0);
+    });
+    connect(ui->label_btnToPg2, &QLabel::linkActivated, [=](){
+        ui->stackedWidget->setCurrentIndex(1);
+    });
+
+}
+
+OperationInterface::~OperationInterface()
+{
+    delete ui;
+}
+
+//重写resizeEvent事件
+void OperationInterface::resizeEvent(QResizeEvent *event)
+{
+    //屏蔽未使用变量警告
+    Q_UNUSED(event);
+    //实时改变布局
+    ui->widget_SideBar->setGeometry(0, 0, 120, this->height());
+    ui->widget_SideBar->setStyleSheet("QWidget {border-right: 1px solid black;}");
+}

@@ -1,0 +1,125 @@
+#include "operationinterface.h"
+#include "ui_operationinterface.h"
+#include <QBitmap>
+#include <QDebug>
+#include <QPixmap>
+
+
+OperationInterface::OperationInterface(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::OperationInterface)
+{
+    ui->setupUi(this);
+    //设置窗口信息
+    this->setWindowTitle("电影售票管理系统");
+    this->setWindowIcon(QIcon(":/res/core.png"));
+    this->setMinimumSize(1300, 750);
+
+    ////////////////////////////////////////////////////////////////////////添加边框便于查看
+    this->setStyleSheet("QLabel {"
+                      "border: 2px solid black;"
+                       "width"
+                      "}");
+
+    //设置默认stackWidget界面
+    ui->stackedWidget->setCurrentIndex(0);
+
+    //sideBar
+    ui->widget_SideBar->setFixedWidth(140);
+
+    //label-头像
+    ui->label_userPhoto->setGeometry(20, 20, 100 , 100);
+    ui->label_userPhoto->setStyleSheet("QLabel {border-radius: 50%;}");
+    //加载头像
+    QPixmap pix;
+    pix.load(":res/icon2.png");
+    //拉伸图片
+    pix = pix.scaled(ui->label_userPhoto->width(), ui->label_userPhoto->height(), Qt::KeepAspectRatio);
+    //填充图片
+    ui->label_userPhoto->setPixmap(pix);
+
+    //label-userID
+    ui->label_userID->
+
+    //label-button
+    connect(ui->label_btnToPg1, &QLabel::linkActivated, [=](){
+        ui->stackedWidget->setCurrentIndex(0);
+    });
+    connect(ui->label_btnToPg2, &QLabel::linkActivated, [=](){
+        ui->stackedWidget->setCurrentIndex(1);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ///////////////////////////////////////////////////////////////////////////QStackWidget示例↓
+//    // 创建左侧栏
+//    QWidget *sidebar = new QWidget(this);
+//    QVBoxLayout *sidebarLayout = new QVBoxLayout(sidebar);
+//    QPushButton *button1 = new QPushButton("内容1", this);
+//    QPushButton *button2 = new QPushButton("内容2", this);
+//    QPushButton *button3 = new QPushButton("内容3", this);
+
+//    sidebarLayout->addWidget(button1);
+//    sidebarLayout->addWidget(button2);
+//    sidebarLayout->addWidget(button3);
+
+//    // 创建主窗口内容
+//    QStackedWidget *stackedWidget = new QStackedWidget(this);
+//    QWidget *content1 = new QWidget(this);
+//    QWidget *content2 = new QWidget(this);
+//    QWidget *content3 = new QWidget(this);
+
+//    // 为内容部件设置布局和内容
+//    content1->setLayout(new QVBoxLayout(content1));
+//    content1->layout()->addWidget(new QLabel("这是内容1"));
+
+//    content2->setLayout(new QVBoxLayout(content2));
+//    content2->layout()->addWidget(new QLabel("这是内容2"));
+
+//    content3->setLayout(new QVBoxLayout(content3));
+//    content3->layout()->addWidget(new QLabel("这是内容3"));
+
+//    // 将内容部件添加到 QStackedWidget 中
+//    stackedWidget->addWidget(content1);
+//    stackedWidget->addWidget(content2);
+//    stackedWidget->addWidget(content3);
+
+//    // 连接按钮点击信号到切换内容槽函数
+//    connect(button1, &QPushButton::clicked, [stackedWidget]() { stackedWidget->setCurrentIndex(0); });
+//    connect(button2, &QPushButton::clicked, [stackedWidget]() { stackedWidget->setCurrentIndex(1); });
+//    connect(button3, &QPushButton::clicked, [stackedWidget]() { stackedWidget->setCurrentIndex(2); });
+
+//    // 主窗口布局
+//    QHBoxLayout *mainLayout = new QHBoxLayout;
+//    mainLayout->addWidget(sidebar);
+//    mainLayout->addWidget(stackedWidget);
+
+//    // 设置主窗口布局
+//    QWidget *centralWidget = new QWidget;
+//    centralWidget->setLayout(mainLayout);
+//    setCentralWidget(centralWidget);
+    ///////////////////////////////////////////////////////////////////////////QStackWidget示例↑
+}
+
+OperationInterface::~OperationInterface()
+{
+    delete ui;
+}
