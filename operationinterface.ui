@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OperationInterface</class>
+ <widget class="QMainWindow" name="OperationInterface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1300</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1300</width>
+    <height>750</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget_SideBar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>100</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>300</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <widget class="QLabel" name="label_userPhoto">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>9</y>
+       <width>36</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>头像</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_userID">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>33</y>
+       <width>18</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>id</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_userGroup">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>57</y>
+       <width>63</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>@所属组</string>
+     </property>
+    </widget>
+    <widget class="MyLabel" name="label_btnToPg1">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>81</y>
+       <width>45</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>按钮1</string>
+     </property>
+    </widget>
+    <widget class="MyLabel" name="label_btnToPg3">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>129</y>
+       <width>54</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>按钮3</string>
+     </property>
+    </widget>
+    <widget class="MyLabel" name="label_btnToPg4">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>153</y>
+       <width>45</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>按钮4</string>
+     </property>
+    </widget>
+    <widget class="MyLabel" name="label_btnToPg2">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>105</y>
+       <width>45</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>按钮2</string>
+     </property>
+    </widget>
+    <widget class="MyLabel" name="label_btnToPg5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>45</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>按钮5</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>115</x>
+      <y>9</y>
+      <width>1176</width>
+      <height>674</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page_1">
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>180</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_pg1">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>0</y>
+        <width>111</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>第一页</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_operate" native="true">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>891</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <widget class="MyLabel" name="label_delete">
+       <property name="geometry">
+        <rect>
+         <x>670</x>
+         <y>30</y>
+         <width>81</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>删除</string>
+       </property>
+      </widget>
+      <widget class="MyLabel" name="label_add">
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>30</y>
+         <width>81</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>添加</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_search" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>461</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <widget class="MyLineEdit" name="lineEdit_search">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>10</y>
+          <width>311</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>搜索框</string>
+        </property>
+       </widget>
+       <widget class="MyLabel" name="label_search">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>81</width>
+          <height>18</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>搜索</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>20</y>
+          <width>100</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>MovieID</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>MovieName</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ReleaseDate</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Duration</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Director</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Genre</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <widget class="MyLabel" name="label_save">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>30</y>
+         <width>81</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>保存</string>
+       </property>
+      </widget>
+      <widget class="MyLabel" name="label_update">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>30</y>
+         <width>81</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>刷新</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QLabel" name="label_pg2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>20</y>
+        <width>421</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>第二页</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QLabel" name="label_pg3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>261</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>第三页</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <widget class="QLabel" name="label_pg4">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>60</y>
+        <width>371</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>第四页</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_5">
+     <widget class="QLabel" name="label_pg5">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>60</y>
+        <width>371</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>第五页</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <action name="action_Exit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyLabel</class>
+   <extends>QLabel</extends>
+   <header location="global">mylabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MyLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">mylineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

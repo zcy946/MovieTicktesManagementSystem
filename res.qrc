@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/icon.png</file>
+        <file>res/icon2.png</file>
+        <file>res/movieTicket.png</file>
+        <file>res/dataBase.png</file>
+        <file>res/warning.png</file>
+        <file>res/core.png</file>
+        <file>res/message.png</file>
+        <file>res/search.png</file>
+        <file>res/operationinterface.png</file>
+        <file>res/addNewData.png</file>
+    </qresource>
+</RCC>
