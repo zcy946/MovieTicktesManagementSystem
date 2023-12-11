@@ -3,6 +3,16 @@ CREATE DATABASE movieticktesmanagementsystem;
 USE movieticktesmanagementsystem;
 -- ---------------------------------------------------------------------------------------------------------------------------------------------
 -- 创建表
+-- 账户表（Accounts）:
+	-- 用户ID（UserID）
+	-- 密码（Password）
+	-- 所属组（Group）
+CREATE TABLE Accounts (
+    UserID INT PRIMARY KEY,
+    PASSWORD VARCHAR(255) NOT NULL,
+    UserGroup VARCHAR(255)
+);
+
 -- 电影表（Movies）:
 	-- 电影ID（MovieID）
 	-- 电影名称（MovieName）
@@ -36,8 +46,7 @@ CREATE TABLE Cinemas (
 CREATE TABLE Auditoriums (
     AuditoriumID INT PRIMARY KEY,
     AuditoriumName VARCHAR(255) NOT NULL,
-    CinemaID INT,
-    FOREIGN KEY (CinemaID) REFERENCES Cinemas(CinemaID)
+    CinemaID INT NOT NULL
 );
 
 -- 场次表（Screenings）:
@@ -47,9 +56,9 @@ CREATE TABLE Auditoriums (
 	-- 开始时间（StartTime）
 CREATE TABLE Screenings (
     ScreeningID INT PRIMARY KEY,
-    MovieID INT,
-    AuditoriumID INT,
-    StartTime DATETIME
+    MovieID INT NOT NULL,
+    AuditoriumID INT NOT NULL,
+    StartTime DATETIME NOT NULL
 );
 
 -- 订单表（Orders）:
@@ -59,9 +68,9 @@ CREATE TABLE Screenings (
 -- 用户ID（UserID）
 CREATE TABLE Orders (
     OrderID INT PRIMARY KEY,
-    ScreeningID INT,
-    SeatNumber VARCHAR(10),
-    UserID INT
+    ScreeningID INT NOT NULL,
+    SeatNumber VARCHAR(10) NOT NULL,
+    UserID INT NOT NULL
 );
 -- ---------------------------------------------------------------------------------------------------------------------------------------------
 -- 添加数据

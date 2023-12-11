@@ -151,19 +151,6 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_pg1">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>0</y>
-        <width>111</width>
-        <height>18</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>第一页</string>
-      </property>
-     </widget>
      <widget class="QWidget" name="widget_operate" native="true">
       <property name="geometry">
        <rect>
